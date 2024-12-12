@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'inter-reg';
+    src: url('./assets/fonts/static/Inter_18pt-Regular.ttf');
+}
+
+body {
+    font-family: 'inter-reg';
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}

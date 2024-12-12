@@ -1,0 +1,9 @@
+.input__container form fieldset {
+    text-align: center;
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+.input__container form fieldset input {
+    width: 400px;
+}
