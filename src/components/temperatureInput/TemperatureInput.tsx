@@ -10,10 +10,22 @@ interface ITemperatureInputProps {
 const TemperatureInput: React.FC<ITemperatureInputProps> = (props) => {
 
     const handleCelsiusChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if(e.target.value === '') {
+            props.setTemperatureF('');
+            props.setTemperatureC(e.target.value);
+            return;
+        }
+
         props.setTemperatureC(e.target.value);
         props.setTemperatureF(((Number(e.target.value) * 9 / 5) + 32).toFixed(2).toString());
     }
     const handleFahrenheitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if(e.target.value === '') {
+            props.setTemperatureC('');
+            props.setTemperatureF(e.target.value);
+            return;
+        }
+
         props.setTemperatureF(e.target.value);
         props.setTemperatureC(((Number(e.target.value) - 32) * 5 / 9).toFixed(2).toString());
     }
